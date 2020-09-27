@@ -12,6 +12,8 @@ import { NewsListingComponent } from './news-listing/news-listing.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { NewsService } from './shared/services/news.service';
 import { NewsDetailsComponent } from './news-details/news-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -23,12 +25,14 @@ import { NewsDetailsComponent } from './news-details/news-details.component';
     EventCardComponent,
     FooterComponent,
     NewsListingComponent,
-    NewsDetailsComponent  
+    NewsDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     NewsService
