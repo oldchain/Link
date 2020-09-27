@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NewsService } from '../shared/services/news.service';
 
 @Component({
@@ -8,10 +8,12 @@ import { NewsService } from '../shared/services/news.service';
 })
 export class EventCardComponent implements OnInit {
  
+  
   @Input() articles;
+  @Output() selected = new EventEmitter();
+
   constructor() { }
   ngOnInit(): void {
    
   }
-
 }

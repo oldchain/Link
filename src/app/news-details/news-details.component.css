@@ -26,4 +26,7 @@ a.active{
 section .details img{
     float: left;
     padding: 0px 30px 30px 0px;
+    height: 400px;
+    width: 600px;
+
 }

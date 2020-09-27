@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { NewsService } from '../shared/services/news.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,8 +14,9 @@ export class NewsListingComponent implements OnInit {
   articles = null
   categories = null;
   filtered_news = null;
+  selectedEvent = null;
   categoriesForm: FormGroup;
-  constructor(private newsService: NewsService,private fb: FormBuilder  ) { }
+  constructor(private newsService: NewsService,private fb: FormBuilder,private router: Router) { }
 
   
   ngOnInit(): void {
@@ -32,6 +35,9 @@ export class NewsListingComponent implements OnInit {
     this.newsService.all()
       .subscribe(news => {this.categories = news['sourceCategory'];
       });
-      
+  }
+  selectEvent(event) {
+    this.selectedEvent = event;
+    console.log(this.selectedEvent);
   }
 }

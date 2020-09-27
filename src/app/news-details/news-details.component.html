@@ -1,25 +1,21 @@
-<section>
+<section *ngIf="selected_article">
     <div class="navigation">
         <div class="container">
             <a routerLink="/home" routerLinkActive="active">Home</a> >
             <a href="#">Media Center</a> >
             <a class="" href="#">Press Release</a> >
-            <a class="active" >Al Jalila Foundation awards AED 5 million to boost medical research in the UAE</a>
+            <a class="active" >{{selected_article.title}}</a>
         </div>
     </div>
     <div class="details container">
         <h1>PRESS RELEASE</h1>
-        <img src="../../assets/img/Layer73.svg">
-        <div class="description">
-            <h4>Al Jalila Foundation Awards AED 5 million to boost Medical Research
-            </h4>
-            <p>13April 2016</p>
-            <p>Al Jalila Foundation, a global healthcare philanthropic organisation founded to position the UAE at the forefront of medical innovation, has awarded AED 5 million in seed grants to 20 UAE-based medical researchers bringing the total investment to date to AED 9 million for 35 research projects. The seed grants focus on research in the field of cancer, cardiovascular disease, diabetes, mental health and obesity, Al Jalila Foundation Research Centre’s five research priorities. Two Emirati graduates were also selected to pursue medical research fellowships at internationally renowned institutions Out of 55 applications submitted for the seed grants, 20 candidates, including 10 women, succeeded following a competitive two-stage international review process with experts from the world’s most renowned medical institutions.
-                including Harvard Medical School.
-                <br><br>University of Oxford, Imperial College, University of Queensland, INSERM, University of Auckland, University of Toronto, University of Glasgow, National University of Singapore and University of Stony Brook. The reviewers were handpicked as leaders in each specific field of research, in line with Al Jalila Foundation’s commitment to cultivating a medical research ecosystem built on international best practice.
+        <img class="img-responsive" [src]="selected_article.urlToImage" alt="image">
 
-Her Excellency Dr Raja Al Gurg, Member of the Board of Trustees and Chairperson of the Board of Directors of Al Jalila Foundation, commented: “Scientists around the world continue to search for answers into the causes, prevention and treatment of diseases affecting mankind. Our investment in medical research reaffirms our commitment to embed research and innovation in the fabric of the nation’s long-term healthcare strategy. Medical research has the potential to save lives and our efforts today will pave the way for a healthier world for future generations. ”
-Al Jalila Foundation is fully funded by the generosity of donors. 100% of funds donated to Al Jalila Foundation are invested into medical research, education and treatment in the UAE.
+        <div class="description">
+            <h4>{{selected_article.title}}
+            </h4>
+            <p>{{selected_article.publishedAt | date}}</p>
+            <p>{{selected_article.content}}
         </p>
         <h4>ATTATCHMENTS
         </h4>

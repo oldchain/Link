@@ -5,7 +5,7 @@
                 <img src=""> 
                 <h2 style="font-size:30px;"><span style="font-size: 60px;">{{article.publishedAt | date: 'd'}}</span><br>{{article.publishedAt | date: 'MMMM'}}<br><span style="font-size: 18px;">{{article.publishedAt | date: 'EEEE y'}}</span></h2>
                 <p>{{article.description}} </p>
-                <button class="btn btn-lg">Read More</button>
+                <button class="btn btn-lg" (click)="selected.emit(article);$event.stopImmediatePropagation()" [routerLink]="[ '/newsdetails',article.id]">Read More</button>
             </div>
         </div>
     </div>    
