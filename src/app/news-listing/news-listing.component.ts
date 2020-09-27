@@ -27,7 +27,7 @@ export class NewsListingComponent implements OnInit {
     this.newsService.all()
       .subscribe(news => {this.articles = news['articles'];
       });
-  }
+    }
   getCategories(){
     this.newsService.all()
       .subscribe(news => {this.categories = news['sourceCategory'];
