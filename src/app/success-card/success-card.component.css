@@ -1,0 +1,32 @@
+.card{
+    margin-top: 80px;
+    background-image: url("../../assets/img/help1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+   
+    }
+.card img{
+    background-color: #008795;
+    padding: 5% 3% 5% 3%;
+    border-radius: 50%;
+    border: 8px solid white
+    
+}
+.content{
+    margin-top: -50px;
+    
+
+}
+.layer{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+h1{
+    padding: 80px;
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+p{
+    padding: 0px 20px 80px 20px;
+}

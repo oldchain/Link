@@ -1,0 +1,39 @@
+.card   {
+    background: url("../../assets/img/press2.png");
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+    border: none;
+    border-radius: 0px;
+    color: white;
+    padding: 0px;
+    height: 600px;
+}
+.card:hover{
+    background: none;
+    background-color:  #7CC242;
+    cursor: pointer;
+}
+.card button{
+    position: absolute;
+    margin-bottom: 50px;
+    bottom: 0;
+    background-color: #A7A9AC;
+    border-radius: 0px;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    font-size: 15px;
+}
+.card:hover button{
+    border: 1px solid #ffffff;
+    background-color:  #7CC242;
+}
+.layer{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; 
+    padding: 0px 20px 100px 20px;
+}
+.layer:hover{
+    background-color: #7CC242;
+}

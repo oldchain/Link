@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1" height="20" viewBox="0 0 1 20">
+  <defs>
+    <clipPath id="clip">
+      <use xlink:href="#fill"/>
+    </clipPath>
+  </defs>
+  <g id="Shape_6" data-name="Shape 6" fill="none" stroke="#fff" stroke-width="2">
+    <rect id="fill" width="1" height="20" stroke="none"/>
+    <path d="M0,1h1M1,0v20M1,19h-1M0,20v-20" fill="none" clip-path="url(#clip)"/>
+  </g>
+</svg>

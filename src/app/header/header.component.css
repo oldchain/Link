@@ -1,0 +1,20 @@
+
+.logo{
+    background-color:  #ffffff !important;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+nav{
+    padding: 10px 200px 10px 200px;
+    background-color:  rgba(219, 219, 219, 0.8) !important;
+}
+nav .nav-item .nav-link{
+    color: #008795;
+    margin-top: 0px !important;
+    margin-right: 20px;
+}
+nav .nav-item .nav-link:hover{
+    background-color: #008795;
+    opacity: 0.5;
+    color: white;
+}

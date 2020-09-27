@@ -1,0 +1,126 @@
+.home-section{
+    margin-top: 7%;
+    background-image: url('../../assets/img/bg1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0px 0px 200px 0px;
+    
+}
+.heading{
+    padding-top: 15%;
+    
+}
+.heading p {
+     width: 45%;
+     margin: auto; 
+     font-size: 30px; 
+     color: #FFFFFF;
+}
+.heading span{
+    font-size: 35px; 
+    color: #C2F83F;
+}
+.home-section button{
+    margin-top: 5%;
+    width: 200px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 0%;
+    margin-left: 2%;
+    color: #FFFFFF;
+    border: 1px solid #8DC043;
+}
+.home-section button:hover{
+    background-color: #C2F83F;
+}
+.home-section .btn-success{
+    background-color: #8DC043;
+}
+.donate{
+    margin: auto; 
+    width: 50%;
+}
+.help-section{
+    color: #008795;
+    padding-top: 5%;
+}
+.our-programs{
+    margin-top: 100px;
+    background-image: url('../../assets/img/bg2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    height: auto    ;
+}
+.layer{
+    color: #FFFFFF;
+    padding-top: 3%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 150px;
+    height: auto;
+}
+.program{
+    width: 250.86px;
+    height: 250.86px;
+    padding: 35px 0px 35px 0px;
+    border: 3px solid #FFFFFF;
+    margin-left: 50px;  
+    transform: rotate(45deg);
+}
+.program:hover{
+    background-color: #008795;
+
+}
+
+.program .content{
+    transform: rotate(-45deg);
+}
+.program .content img{
+    padding-bottom: 30px;
+}
+.program .content span,.program .content p{
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+.row.justify-content-center.first{
+    margin-top: 100px;
+    margin-bottom: -60px;
+}
+.background{
+    background-color: #008795;
+}
+.events-section{
+    color: #008795;
+    padding-top: 2%;
+}
+
+.events-section .col-md-3{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+@media (max-width: 1024px) {
+  
+    .home-section{
+        margin-top:190px;
+        background-size: cover;
+        background-position: left;
+
+    }
+    .heading{
+        padding-top: 30%;
+        
+    }
+    .heading p {
+
+         font-size: 15px; 
+         color: #FFFFFF;
+    }
+    .heading span{
+        font-size: 20px; 
+        color: #C2F83F;
+    }
+  
+}

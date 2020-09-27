@@ -1,0 +1,40 @@
+<section>
+    <div class="navigation">
+        <div class="container">
+            <a routerLink="/home" routerLinkActive="active">Home</a> >
+            <a href="#">Media Center</a> >
+            <a class="active" href="#">Press Release</a>
+        </div>
+    </div>
+    <div class="press-release">
+        <div class="container">
+            <h1>PRESS RELEASE</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <form>
+                        <select name="cars" class="custom-select mb-3">
+                          <option selected>Category</option>
+                          <option value="volvo">Volvo</option>
+                          <option value="fiat">Fiat</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </form>
+                </div>
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Title
+                        " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-secondary" type="button">Subscribe</button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <app-event-card [articles]="articles"></app-event-card>
+             </div>
+        </div>
+    </div>
+</section>

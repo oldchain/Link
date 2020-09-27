@@ -1,0 +1,40 @@
+footer{
+    margin-top: 150px;
+    background-color: #D9D9D9;
+    color:#4A4A4A;
+    
+}
+.subscribe{
+    padding: 50px 0px 50px 0px;
+
+}
+footer h3{
+    padding-bottom: 15px;
+    font-weight: 350;
+}
+footer a{
+    display: inline-block;
+    margin: 5px 0px 5px 0px;
+    color:#4A4A4A;
+}
+footer .input-group button{
+    background-color: #61AEB9;
+}
+footer .input-group button,footer .input-group input{
+    height: 50px;
+    border-radius: 0px;
+    border: 0px;
+    padding: 0px 20px 0px 20px;
+}
+.newsletter{
+    margin-top: 50px;
+}
+.copyright{
+    color: white;
+    background-color: #168D91;
+    padding: 20px 0px 20px 0px;
+}
+.copyright a {
+    padding: 0px 10px 0px 10px;
+    color: white;
+}
