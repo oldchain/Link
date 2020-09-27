@@ -1,15 +1,10 @@
 .home-section{
-    margin-top: 7%;
-    background-image: url('../../assets/img/bg1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 0px 0px 200px 0px;
+    padding: 0px 0px 300px 0px;
+    position: relative;
     
 }
 .heading{
-    padding-top: 15%;
+    padding-top: 25%;
     
 }
 .heading p {
@@ -23,13 +18,31 @@
     color: #C2F83F;
 }
 .home-section button{
-    margin-top: 5%;
+    margin-top: 30px;
     width: 200px;
     padding: 10px 30px 10px 30px;
     border-radius: 0%;
     margin-left: 2%;
     color: #FFFFFF;
     border: 1px solid #8DC043;
+}
+.home-section img{
+    height: 5px !important;
+}
+.carousel-control-prev, .carousel-control-next {
+    display: block;
+}
+.carousel-control-prev, .carousel-control-next{
+    top: 20% !important;
+}
+.carousel-control-prev-icon {
+    width: 60px !important;
+    background-image: url("../../assets/img/right.svg") !important;
+    top: 200px !important;
+}
+.carousel-control-next-icon{
+    width: 60px !important;
+    background-image: url("../../assets/img/left.svg") !important;
 }
 .home-section button:hover{
     background-color: #C2F83F;
@@ -44,6 +57,10 @@
 .help-section{
     color: #008795;
     padding-top: 5%;
+    z-index: 5;
+    position: relative;
+    background-color: white;
+    
 }
 .our-programs{
     margin-top: 100px;
