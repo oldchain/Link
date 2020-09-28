@@ -31,22 +31,18 @@ export class NewsListingComponent implements OnInit {
     this.startPage=0;
     this.paginationLimit=8;
   }
-  /**
-  onEnter(value: string) { 
+
+  filterNews(e) {
+    console.log(e.target.value);
     this.newsService.all()
-    .subscribe(news => {this.articles = news['articles'].slice(this.startPage,this.paginationLimit);
-    });
-    this.values = value; 
-    this.articles.forEach(article => {
-      this.articles.forEach(article => {
-        if(article.title.toLocaleLowerCase().contains(value.toLocaleLowerCase())){
-          this.filtered_articles.push(article);
-          console.log(this.filtered_articles);
-        }
+      .subscribe(news => {
+        if(!(e.target.value == "Show All")){
+          this.articles = news['articles'].filter(article => article.sourceID == e.target.value);
+        }else{
+          this.articles = news['articles']
+        } 
       });
-    });
   }
-  **/
   showMoreItems()
   {
     this.newsService.all()
