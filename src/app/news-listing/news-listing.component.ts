@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
 export class NewsListingComponent implements OnInit {
   articles = [];
   categories = null;
-  filtered_news = null;
   selectedEvent = null;
   startPage = null;
   paginationLimit = null;

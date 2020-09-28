@@ -33,9 +33,9 @@
                 <app-event-card [articles]="articles.slice(startPage,paginationLimit)" (selected)="selectEvent($event)"></app-event-card>
              </div>
              <div class="row">
-                <button *ngIf ="true
+                <button class="btn btn-lg btn-block load-more" *ngIf ="true
                 " (click)="showMoreItems()">
-                    Show More
+                    LOAD MORE
                 </button>
              </div>
         </div>
