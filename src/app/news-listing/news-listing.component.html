@@ -30,7 +30,13 @@
         </div>
         <div class="container">
             <div class="row">
-                <app-event-card [articles]="articles.slice(0,8)" (selected)="selectEvent($event)"></app-event-card>
+                <app-event-card [articles]="articles.slice(startPage,paginationLimit)" (selected)="selectEvent($event)"></app-event-card>
+             </div>
+             <div class="row">
+                <button *ngIf ="true
+                " (click)="showMoreItems()">
+                    Show More
+                </button>
              </div>
         </div>
     </div>

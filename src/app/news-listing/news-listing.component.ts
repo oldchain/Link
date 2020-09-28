@@ -11,10 +11,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./news-listing.component.css']
 })
 export class NewsListingComponent implements OnInit {
-  articles = null
+  articles = [];
   categories = null;
   filtered_news = null;
   selectedEvent = null;
+  startPage = null;
+  paginationLimit = null;
   categoriesForm: FormGroup;
   constructor(private newsService: NewsService,private fb: FormBuilder,private router: Router) { }
 
@@ -25,10 +27,22 @@ export class NewsListingComponent implements OnInit {
     this.categoriesForm = this.fb.group({
       categoryControl: [this.categories]
     });
+    this.startPage=0;
+    this.paginationLimit=8;
+  }
+
+  showMoreItems()
+  {
+    this.newsService.all()
+      .subscribe(news => {this.articles = news['articles'];
+      });
+     this.paginationLimit = Number(this.paginationLimit) + 4;
+     console.log("button fired");
+     this.articles.slice(this.startPage,this.paginationLimit); 
   }
   getNews(){
     this.newsService.all()
-      .subscribe(news => {this.articles = news['articles'];
+      .subscribe(news => {this.articles = news['articles'].slice(this.startPage,this.paginationLimit);
       });
     }
   getCategories(){
