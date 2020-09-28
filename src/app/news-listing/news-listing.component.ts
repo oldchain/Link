@@ -14,8 +14,10 @@ export class NewsListingComponent implements OnInit {
   articles = [];
   categories = null;
   selectedEvent = null;
+  filtered_articles = null
   startPage = null;
   paginationLimit = null;
+  searchText = {title:''};
   categoriesForm: FormGroup;
   constructor(private newsService: NewsService,private fb: FormBuilder,private router: Router) { }
 
@@ -29,7 +31,22 @@ export class NewsListingComponent implements OnInit {
     this.startPage=0;
     this.paginationLimit=8;
   }
-
+  /**
+  onEnter(value: string) { 
+    this.newsService.all()
+    .subscribe(news => {this.articles = news['articles'].slice(this.startPage,this.paginationLimit);
+    });
+    this.values = value; 
+    this.articles.forEach(article => {
+      this.articles.forEach(article => {
+        if(article.title.toLocaleLowerCase().contains(value.toLocaleLowerCase())){
+          this.filtered_articles.push(article);
+          console.log(this.filtered_articles);
+        }
+      });
+    });
+  }
+  **/
   showMoreItems()
   {
     this.newsService.all()

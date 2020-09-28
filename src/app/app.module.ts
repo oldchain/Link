@@ -13,6 +13,8 @@ import { HttpClientModule } from  '@angular/common/http';
 import { NewsService } from './shared/services/news.service';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
+
 
 
 
@@ -32,7 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FilterPipeModule
   ],
   providers: [
     NewsService

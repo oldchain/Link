@@ -19,8 +19,8 @@
                 </div>
                 <div class="col-md-8">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Title
-                        " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <!--search textInput to use data bindings to dynamically search for news with the title of the search bar-->
+                        <input [(ngModel)]="searchText.title"  type="text" class="form-control" placeholder="Title">
                         <div class="input-group-append">
                           <button class="btn btn-secondary" type="button"><img src="../../assets/img/Icon/search-white.svg"></button>
                         </div>
@@ -30,7 +30,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <app-event-card [articles]="articles.slice(startPage,paginationLimit)" (selected)="selectEvent($event)"></app-event-card>
+                <app-event-card [articles]="articles.slice(startPage,paginationLimit) | filterBy:searchText" (selected)="selectEvent($event)"></app-event-card>
              </div>
              <div class="row">
                 <button class="btn btn-lg btn-block load-more" *ngIf ="paginationLimit < 20
