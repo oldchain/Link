@@ -138,5 +138,21 @@
         font-size: 20px; 
         color: #C2F83F;
     }
+    .program{
+        width: 150px;
+        height: 150px;
+        padding: 14px 0px 35px 0px;
+        margin-left: 50px;  
+    }
+    .col-md-3.col-sm-12.justify-content-center{
+        margin-bottom: 80px;
+    }
+    .program .content span,.program .content p{
+        font-size: 20px;
+        margin-bottom: -10px;
+    }
+    .program .content span,.program .content img{
+        height: 70px;
+    }
   
 }
