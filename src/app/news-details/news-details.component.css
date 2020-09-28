@@ -26,7 +26,28 @@ a.active{
 section .details img{
     float: left;
     padding: 0px 30px 30px 0px;
-    height: 400px;
-    width: 600px;
+    height: 263px;
+    width: 390px;
 
+}
+.intersted{
+    padding-top: 190px;
+}
+.intersted h4{
+    padding: 30px 0px 10px 0px;
+}
+.bg{
+    background-image: url("../../assets/img/Layer76.svg");
+    background-position: center;
+    padding: 30px 40px 30px 40px;
+}
+.content{
+    background-color: rgba(0,135,149,0.7);
+    padding: 60px 50px 60px 50px;
+    color: white;
+    
+}
+.layer{
+    background-color: rgba(0,0,0,0.4);
+    height: auto;
 }
