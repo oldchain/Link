@@ -3,7 +3,7 @@
         <div class="container">
             <a routerLink="/home" routerLinkActive="active">Home</a> >
             <a href="#">Media Center</a> >
-            <a class="active" href="#">Press Release</a>
+            <a class="active" routerLink="/news" routerLinkActive="active">Press Release</a>
         </div>
     </div>
     <div class="press-release">
@@ -22,7 +22,7 @@
                         <input type="text" class="form-control" placeholder="Title
                         " aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                          <button class="btn btn-secondary" type="button">Subscribe</button>
+                          <button class="btn btn-secondary" type="button"><img src="../../assets/img/Icon/search-white.svg"></button>
                         </div>
                       </div>
                 </div>
@@ -33,7 +33,7 @@
                 <app-event-card [articles]="articles.slice(startPage,paginationLimit)" (selected)="selectEvent($event)"></app-event-card>
              </div>
              <div class="row">
-                <button class="btn btn-lg btn-block load-more" *ngIf ="true
+                <button class="btn btn-lg btn-block load-more" *ngIf ="paginationLimit < 20
                 " (click)="showMoreItems()">
                     LOAD MORE
                 </button>
