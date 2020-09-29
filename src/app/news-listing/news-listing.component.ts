@@ -24,6 +24,7 @@ export class NewsListingComponent implements OnInit {
   ngOnInit(): void {
     this.getNews();
     this.getCategories();
+    //this method to pass the categories to the categoriedForm
     this.categoriesForm = this.fb.group({
       categoryControl: [this.categories]
     });
@@ -31,6 +32,7 @@ export class NewsListingComponent implements OnInit {
     this.paginationLimit=8;
   }
 
+  //the function is to filter the news by the category comning from the dropdown list
   filterNews(e) {
     console.log(e.target.value);
     this.newsService.all()
@@ -42,25 +44,29 @@ export class NewsListingComponent implements OnInit {
         } 
       });
   }
+
+
   showMoreItems()
   {
     this.newsService.all()
       .subscribe(news => {this.articles = news['articles'];
       });
-     this.paginationLimit = Number(this.paginationLimit) + 4;
-     console.log("button fired");
-     this.articles.slice(this.startPage,this.paginationLimit); 
+     this.paginationLimit = Number(this.paginationLimit) + 4; //each time the showMoreItems is excuted the paginationLimit is passing 4 more indexes to access for the articles array
+     this.articles.slice(this.startPage,this.paginationLimit);  //using .slice to access only from the 0 index to the paginationLimit index
   }
+
   getNews(){
     this.newsService.all()
       .subscribe(news => {this.articles = news['articles'].slice(this.startPage,this.paginationLimit);
       });
     }
+
   getCategories(){
     this.newsService.all()
       .subscribe(news => {this.categories = news['sourceCategory'];
       });
   }
+  // this function to get the selected event to pass it tho the news details
   selectEvent(event) {
     this.selectedEvent = event;
     console.log(this.selectedEvent);

@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getNews();
     
+    // this is used to always scroll to top whenever the component is navigated to
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
           return;
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
     this.newsService.all()
       .subscribe(news => {this.articles = news['articles'];
           console.log(this.articles);
+          //foreach used to loop inside the articles array and get the objects with the showOnHomepage = 'true'
           this.articles.forEach(article => {
             if(article.showOnHomepage === true){
               this.home_articles.push(article);

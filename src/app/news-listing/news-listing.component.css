@@ -28,3 +28,9 @@ a.active{
 .btn-secondary{
     background-color: #008795;
 }
+@media (max-width: 1024px) {
+    section .navigation {
+        padding: 164px 0px 10px 0px;
+    }
+
+}

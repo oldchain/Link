@@ -9,3 +9,15 @@
 a{
     color: #008795;
 }
+@media (max-width: 1024px) {
+    h2{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 35px;
+    }
+  
+    span{
+        font-size: 30px !important;
+    }
+}

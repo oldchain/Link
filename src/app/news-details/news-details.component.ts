@@ -18,21 +18,25 @@ export class NewsDetailsComponent implements OnInit {
   selected_article=null;
   
   ngOnInit(): void {
+    // this function is to get the id from the url 
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
       });
+    // end of the function
+
     this.getSelectedArticle();
 
   }
+  
   getSelectedArticle(){
     this.newsService.all()
       .subscribe(news => {
         this.articles = news['articles'];
-       
+        //this is to return the article with the same ID passed in the url
         this.selected_article = this.articles.find(article => {
           return article.id === parseInt(this.id)
         });
-        console.log(this.selected_article);
+        console.log(this.selected_article); //testing the selected_article
       });
 
       

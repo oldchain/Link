@@ -37,3 +37,15 @@
 .layer:hover{
     background-color: #7CC242;
 }
+@media (max-width: 1024px) {
+    .card   {
+        height: 400px;
+    }
+    .card p{
+        font-size: 15px;
+    }
+    .card button{
+       
+        margin-bottom: 30px;
+    }
+}

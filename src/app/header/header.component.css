@@ -18,3 +18,8 @@ nav .nav-item .nav-link:hover{
     opacity: 0.5;
     color: white;
 }
+@media (max-width: 1024px) {
+    nav{
+        padding: 20px;
+    }
+}
