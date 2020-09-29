@@ -9,12 +9,14 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./news-details.component.css']
 })
 export class NewsDetailsComponent implements OnInit {
-  sub = null;
-  id= null;
+  
 
   constructor(private newsService: NewsService, private route: ActivatedRoute) { }
+  sub = null;
+  id= null;
   articles = null
   selected_article=null;
+  
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];

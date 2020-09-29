@@ -14,7 +14,6 @@ export class NewsListingComponent implements OnInit {
   articles = [];
   categories = null;
   selectedEvent = null;
-  filtered_articles = null
   startPage = null;
   paginationLimit = null;
   searchText = {title:''};

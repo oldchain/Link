@@ -120,19 +120,30 @@
 @media (max-width: 1024px) {
   
     .home-section{
-        margin-top:190px;
+        margin-top:250px;
         background-size: cover;
         background-position: left;
 
     }
     .heading{
-        padding-top: 30%;
+        padding-top: 10%;
         
     }
     .heading p {
-
          font-size: 15px; 
          color: #FFFFFF;
+    }
+    .home-section .donate{
+        margin-top: 100px;
+        
+    }
+    .home-section button{
+        color: gray !important;
+        font-size: 12px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 0%;
+
+        color: #FFFFFF;
     }
     .heading span{
         font-size: 20px; 
@@ -156,3 +167,4 @@
     }
   
 }
+
