@@ -16,6 +16,7 @@ export class NewsListingComponent implements OnInit {
   selectedEvent = null;
   startPage = null;
   paginationLimit = null;
+  loading = 1;
   searchText = {title:''};
   categoriesForm: FormGroup;
   constructor(private newsService: NewsService,private fb: FormBuilder,private router: Router) { }
@@ -56,9 +57,12 @@ export class NewsListingComponent implements OnInit {
   }
 
   getNews(){
-    this.newsService.all()
+    setTimeout(() => {
+      this.newsService.all()
       .subscribe(news => {this.articles = news['articles'].slice(this.startPage,this.paginationLimit);
+      this.loading = 0;
       });
+    }, 500);
     }
 
   getCategories(){

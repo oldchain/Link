@@ -21,7 +21,7 @@
                 <div class="col-md-8">
                     <div class="input-group mb-3">
                         <!--search textInput to use data bindings to dynamically search for news with the title of the search bar-->
-                        <input [(ngModel)]="searchText.title"  type="text" class="form-control" placeholder="Title">
+                        <input [(ngModel)]="searchText.title"  type="text" class="form-control" placeholder="Search with title...">
                         <div class="input-group-append">
                           <button class="btn btn-secondary" type="button"><img src="../../assets/img/Icon/search-white.svg"></button>
                         </div>
@@ -33,6 +33,7 @@
             <div class="row justify-content-center">
                 <!--(selected)="selectEvent($event)" is used to pass the selected event to show with the app-event-card -->
                 <app-event-card [articles]="articles.slice(startPage,paginationLimit) | filterBy:searchText" (selected)="selectEvent($event)"></app-event-card>
+                <div class="justify-content-center" *ngIf="loading == 1">Loading...</div>
                 
              </div>
              <div class="row">
